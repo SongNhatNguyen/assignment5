@@ -39,8 +39,8 @@
 
     <main class="container mx-auto py-10 flex-grow">
         <section class="bg-gray-800 text-white py-10 px-6 rounded-lg shadow-lg">
-            <h1 class="text-4xl font-bold text-center">Edit Project - <%= project.title %></h1>
-            <p class="mt-2 text-center text-gray-400">Use the form below to update this project</p>
+            <h1 class="text-4xl font-bold text-center">Edit Project "<%= project.title %>"</h1>
+            <p class="mt-2 text-center text-gray-400">Use the form below to update or delete (thinking twice before deleting) this project</p>
         </section>
 
         <form action="/solutions/editProject" method="POST" class="mt-10 space-y-6">
