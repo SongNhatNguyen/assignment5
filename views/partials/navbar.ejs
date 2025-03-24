@@ -1,6 +1,13 @@
 <nav class="bg-gray-800 shadow-md w-full">
     <div class="container mx-auto flex justify-between items-center p-4">
-        <a href="/" class="text-2xl font-bold text-blue-400">Climate Solutions - Song Nhat Nguyen - 169284239</a>
+        <div class="flex flex-col">
+            <a href="/" class="text-2xl font-bold text-blue-400">
+                Climate Solutions - Song Nhat Nguyen - 169284239
+            </a>
+            <span class="text-xl text-gray-400">
+                <%= timestamp %>
+            </span>
+        </div>
         <div class="flex space-x-6">
             <a class="<%= (page == '/solutions/projects') ? 'text-blue-400 font-bold' : 'text-gray-300 hover:text-blue-400' %>" href="/solutions/projects">View Projects</a>
             <a class="<%= (page == '/solutions/addProject') ? 'text-blue-400 font-bold' : 'text-gray-300 hover:text-blue-400' %>" href="/solutions/addProject">Add Project</a>

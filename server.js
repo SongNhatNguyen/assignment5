@@ -11,6 +11,11 @@ const PORT = process.env.PORT || 8000;
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
+app.use((req, res, next) => {
+  res.locals.timestamp = new Date().toLocaleString(); 
+  next();
+});
+
 const studentName = "Song Nhat Nguyen";
 const studentId = "169284239";
 
@@ -34,7 +39,6 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
   res.render("about");
 });
-
 
 app.get("/solutions/projects", async function (req, res) {
   try {
